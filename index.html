@@ -84,16 +84,16 @@
                     <i data-lucide="graduation-cap" class="w-48 h-48"></i>
                 </div>
                 <div class="z-10">
-                    <span class="text-xs font-bold uppercase tracking-wider bg-indigo-800 text-indigo-200 px-2.5 py-1 rounded-md">기본 설정 데이터</span>
-                    <h3 class="text-xl font-bold mt-3 mb-2">기본 2학년 성적표 탑재됨</h3>
+                    <span class="text-xs font-bold uppercase tracking-wider bg-indigo-800 text-indigo-200 px-2.5 py-1 rounded-md">샘플 데이터</span>
+                    <h3 class="text-xl font-bold mt-3 mb-2">아직 불러온 성적 파일이 없습니다</h3>
                     <p class="text-sm text-indigo-200 leading-relaxed">
-                        현재 화면에 업로드하신 1~7반의 실제 교과 성적(국어, 역사, 도덕, 수학 등 7개 과목) 정보가 기본 분석 자료로 미리 세팅되어 있습니다.
+                        왼쪽에서 성적집계표 파일을 업로드하면 바로 분석이 시작됩니다. 사용법이 궁금하시면 예시용 샘플 데이터(1~7반, 7개 과목)로 먼저 살펴보실 수 있습니다.
                     </p>
                 </div>
                 <div class="z-10 mt-6 flex gap-2">
                     <button id="btn-restore-demo" class="flex-1 py-2 px-4 bg-white/10 hover:bg-white/20 active:bg-white/30 text-white rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 border border-white/20">
                         <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
-                        기본 성적 데이터 복원
+                        샘플 데이터로 미리보기
                     </button>
                 </div>
             </div>
@@ -121,10 +121,6 @@
             <button onclick="switchTab('tab-chart')" id="btn-tab-chart" class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-2 transition-colors">
                 <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
                 과목별 정밀 비교
-            </button>
-            <button onclick="switchTab('tab-github')" id="btn-tab-github" class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-2 transition-colors">
-                <i data-lucide="github" class="w-4 h-4"></i>
-                깃허브 무료 배포 방법
             </button>
         </div>
 
@@ -234,69 +230,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- 4. 깃허브 배포 가이드 탭 -->
-        <div id="tab-github" class="tab-content hidden">
-            <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm max-w-3xl mx-auto space-y-6">
-                <div class="flex items-center gap-3 pb-4 border-b border-slate-200">
-                    <div class="p-2.5 bg-slate-900 text-white rounded-xl">
-                        <i data-lucide="github" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h2 class="text-xl font-bold text-slate-900">GitHub Pages에 무료 웹앱 호스팅하기</h2>
-                        <p class="text-sm text-slate-500">클릭 몇 번으로 전세계 누구나 볼 수 있는 웹서비스로 배포할 수 있습니다.</p>
-                    </div>
-                </div>
-
-                <div class="space-y-6 text-sm text-slate-600 leading-relaxed">
-                    <div>
-                        <h3 class="font-bold text-slate-950 flex items-center gap-2 mb-2">
-                            <span class="flex items-center justify-center w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold">1</span>
-                            저장소(Repository) 만들기
-                        </h3>
-                        <p class="pl-7">
-                            <a href="https://github.com" target="_blank" class="text-indigo-600 hover:underline font-medium">GitHub.com</a> 로그인 후 우측 상단 <strong>[New]</strong> 버튼을 클릭하여 새 저장소를 만듭니다. 저장소 이름은 원하는 영어 이름(예: <code class="bg-slate-100 px-1 py-0.5 rounded text-indigo-600 text-xs">school-stats</code>)으로 지정하고 <strong>Public</strong>으로 설정합니다.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 class="font-bold text-slate-950 flex items-center gap-2 mb-2">
-                            <span class="flex items-center justify-center w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold">2</span>
-                            이 파일 저장 및 업로드
-                        </h3>
-                        <p class="pl-7 mb-2">
-                            이 코드 창의 전체 내용(HTML 코드)을 복사하여 컴퓨터에 <strong><code class="bg-indigo-50 px-1.5 py-0.5 rounded text-indigo-700 font-semibold text-xs">index.html</code></strong> 이라는 파일 이름으로 저장합니다.
-                        </p>
-                        <p class="pl-7">
-                            깃허브 저장소 화면에서 <strong>[uploading an existing file]</strong> 링크를 눌러 생성한 <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-700 text-xs">index.html</code> 파일을 추가한 뒤 아래 <strong>Commit changes</strong> 단추를 클릭해 커밋합니다.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 class="font-bold text-slate-950 flex items-center gap-2 mb-2">
-                            <span class="flex items-center justify-center w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold">3</span>
-                            GitHub Pages 활성화
-                        </h3>
-                        <p class="pl-7">
-                            저장소 상단 메뉴의 <strong>[Settings]</strong>로 이동하여 좌측 바에서 <strong>[Pages]</strong> 메뉴를 선택합니다.
-                        </p>
-                        <p class="pl-7 mt-2">
-                            Build and deployment 영역의 Branch 설정을 None에서 <strong><code class="bg-slate-100 px-1 py-0.5 rounded text-slate-700 text-xs">main</code></strong>(또는 master)으로 변경하고 우측의 <strong>Save</strong> 버튼을 눌러 저장합니다.
-                        </p>
-                    </div>
-
-                    <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 flex items-start gap-3">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5"></i>
-                        <div>
-                            <h4 class="text-xs font-bold text-indigo-900 uppercase">성공적인 완료</h4>
-                            <p class="text-xs text-indigo-700 mt-1">
-                                약 1~2분 후, 해당 페이지 상단에 <code class="font-semibold text-indigo-900">https://아이디.github.io/school-stats/</code> 형태의 실시간 웹 주소가 생성됩니다. 이 주소를 휴대폰이나 브라우저로 접속하시면 바로 작동합니다!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 
     <footer class="bg-white border-t border-slate-200 py-6">
@@ -346,18 +279,44 @@
         // 초기화
         window.onload = function() {
             safeCreateIcons();
-            loadInitialData();
+            renderEmptyState();
             initDragAndDrop();
 
-            // 복구 단추 리스너
+            // 샘플 데이터 미리보기 버튼 리스너
             document.getElementById('btn-restore-demo').addEventListener('click', () => {
-                loadInitialData();
-                showAlert('데이터 복구 성공', '기본 데이터로 대시보드가 초기화되었습니다.', 'info');
+                loadSampleData();
+                showAlert('샘플 데이터 적용됨', '예시용 샘플 데이터로 화면을 채웠습니다. 실제 성적 파일을 업로드하면 이 데이터는 교체됩니다.', 'info');
             });
         };
 
-        // 데이터 초기 로드
-        function loadInitialData() {
+        // 업로드된 데이터가 없을 때 표시할 빈 상태
+        function renderEmptyState() {
+            currentSubjects = [];
+            currentClassData = [];
+            currentRanks = {};
+
+            if (radarChartInstance) { radarChartInstance.destroy(); radarChartInstance = null; }
+            if (barChartInstance) { barChartInstance.destroy(); barChartInstance = null; }
+
+            document.getElementById('summary-cards').innerHTML =
+                '<div class="col-span-full py-10 text-center text-sm text-slate-400 bg-white rounded-2xl border border-dashed border-slate-200">업로드된 성적 데이터가 없습니다. 왼쪽에서 성적집계표 파일을 업로드해 주세요.</div>';
+
+            document.getElementById('overall-rank-list').innerHTML =
+                '<p class="text-sm text-slate-400 text-center py-8">업로드된 데이터가 없습니다.</p>';
+
+            document.getElementById('main-table-head').innerHTML = '';
+            document.getElementById('main-table-body').innerHTML =
+                '<tr><td class="py-10 text-center text-sm text-slate-400">업로드된 성적 데이터가 없습니다. 파일을 업로드해 주세요.</td></tr>';
+
+            document.getElementById('subject-selector-list').innerHTML =
+                '<p class="text-xs text-slate-400">과목 데이터가 없습니다.</p>';
+            document.getElementById('selected-subject-title').innerText = '과목 분석';
+            document.getElementById('selected-subject-subtitle').innerText = '성적 파일을 업로드하면 과목별 반 순위가 표시됩니다.';
+            document.getElementById('subject-insight-section').innerHTML = '';
+        }
+
+        // 샘플 데이터 로드 (미리보기 버튼 전용)
+        function loadSampleData() {
             currentSubjects = [...DEFAULT_DATA.subjects];
             currentClassData = JSON.parse(JSON.stringify(DEFAULT_DATA.classData));
             calculateRanks();
@@ -681,10 +640,13 @@
         // 레이더 차트 그리기
         function renderRadarChart() {
             const ctx = document.getElementById('radarChart').getContext('2d');
-            
+
             if (radarChartInstance) {
                 radarChartInstance.destroy();
+                radarChartInstance = null;
             }
+
+            if (currentClassData.length === 0) return;
 
             // '평균'을 제외한 순수 교과목 레이블 사용
             const radarLabels = currentSubjects.filter(s => s !== '평균');
