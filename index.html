@@ -221,20 +221,6 @@
     </footer>
 
     <script>
-        // 업로드하신 엑셀/CSV 데이터 기준 기본값 세팅
-        const DEFAULT_DATA = {
-            subjects: ["국어", "역사", "도덕", "수학", "과학", "영어", "한문", "평균"],
-            classData: [
-                { classNum: "1반", scores: { "국어": 66.5, "역사": 60.9, "도덕": 75.2, "수학": 50.1, "과학": 58.1, "영어": 59.2, "한문": 62.4, "평균": 61.7 } },
-                { classNum: "2반", scores: { "국어": 67.4, "역사": 65.5, "도덕": 77.6, "수학": 52.7, "과학": 60.2, "영어": 62.5, "한문": 70.3, "평균": 65.2 } },
-                { classNum: "3반", scores: { "국어": 66.8, "역사": 66.3, "도덕": 77.4, "수학": 51.6, "과학": 59.9, "영어": 61.4, "한문": 67.8, "평균": 64.4 } },
-                { classNum: "4반", scores: { "국어": 65.0, "역사": 69.2, "도덕": 78.8, "수학": 50.8, "과학": 57.9, "영어": 59.9, "한문": 69.5, "평균": 64.4 } },
-                { classNum: "5반", scores: { "국어": 69.4, "역사": 65.5, "도덕": 78.4, "수학": 52.2, "과학": 58.8, "영어": 63.8, "한문": 58.6, "평균": 63.8 } },
-                { classNum: "6반", scores: { "국어": 70.0, "역사": 64.9, "도덕": 74.7, "수학": 56.8, "과학": 62.5, "영어": 67.0, "한문": 69.6, "평균": 66.5 } },
-                { classNum: "7반", scores: { "국어": 69.6, "역사": 62.5, "도덕": 76.5, "수학": 54.3, "과학": 60.1, "영어": 64.2, "한문": 65.8, "평균": 64.7 } }
-            ]
-        };
-
         // 전역 상태 변수
         let currentSubjects = [];
         let currentClassData = [];
@@ -290,14 +276,6 @@
             document.getElementById('selected-subject-title').innerText = '과목 분석';
             document.getElementById('selected-subject-subtitle').innerText = '성적 파일을 업로드하면 과목별 반 순위가 표시됩니다.';
             document.getElementById('subject-insight-section').innerHTML = '';
-        }
-
-        // 샘플 데이터 로드 (미리보기 버튼 전용)
-        function loadSampleData() {
-            currentSubjects = [...DEFAULT_DATA.subjects];
-            currentClassData = JSON.parse(JSON.stringify(DEFAULT_DATA.classData));
-            calculateRanks();
-            renderAll();
         }
 
         // 석차 계산 로직
